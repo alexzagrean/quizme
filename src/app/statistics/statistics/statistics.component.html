@@ -1,0 +1,40 @@
+<div class="statistics-wrapper">
+  <div class="statistics-section">
+    <h1>Statistics</h1>
+    <div class="chart">
+      <canvas baseChart [datasets]="barChartData" 
+      [labels]="barChartLabels" 
+      [options]="barChartOptions" 
+      [legend]="barChartLegend"
+      [chartType]="barChartType" 
+      (chartHover)="chartHovered($event)" 
+      (chartClick)="chartClicked($event)" 
+      [colors]="chartColors">
+      </canvas>
+    </div>
+    <div class="chart half-width">
+        <canvas baseChart
+        [data]="pieChartData"
+        [labels]="pieChartLabels"
+        [chartType]="pieChartType"
+        (chartHover)="chartHovered($event)"
+        (chartClick)="chartClicked($event)"
+        [colors]="pieColors"></canvas>
+    </div>
+    <div class="static-chart">
+      <div class="section">
+        <div class="title">Nr of participants</div>
+        <div class="value">123</div>
+      </div>
+      <div class="section">
+          <div class="title">Average score</div>
+          <div class="value">72</div>
+      </div>
+      <div class="section">
+          <div class="title">Attendance</div>
+          <div class="value">53%</div>
+      </div>
+      <div class="section"></div>
+    </div>
+  </div>
+</div>

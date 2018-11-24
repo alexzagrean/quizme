@@ -1,0 +1,14 @@
+<div id="login-wrapper">
+    <div id="login-section">
+        <img src="../../../assets/images/logo1.png" alt="logo" class="logo">
+      <form [formGroup]="registerForm">
+        <input type="text" formControlName="email" placeholder="Email">
+        <input type="text" formControlName="name" placeholder="Name">
+        <input type="text" formControlName="phoneNumber" placeholder="Phone number">
+        <input type="password" formControlName="password" placeholder="Password">
+        <input type="password" formControlName="rePassword" placeholder="Repeat Password">
+
+        <button mat-button>Register</button>
+      </form>
+    </div>
+  </div>

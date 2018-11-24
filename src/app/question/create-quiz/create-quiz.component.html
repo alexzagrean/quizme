@@ -1,0 +1,33 @@
+<div class="create-quiz-wrapper" *ngIf="questions">
+  <div class="create-quiz-section">
+    <h1>Your Questions Pool</h1>
+    <div class="question" *ngFor="let question of questions; let questionIndex = index">
+      <input type="text" placeholder="Type question here...">
+      <div class="choices" *ngIf="question.type == 'Single Choice' || question.type == 'Multiple Choices'">
+        <div class="choice-wrapper" *ngFor="let choice of question.choices; let choiceIndex = index;trackBy: trackByFn">
+          <input type="text" placeholder="Add choice here..." (keydown.tab)="addChoice($event, questionIndex, choiceIndex)"
+            [(ngModel)]="this.questions[questionIndex].choices[choiceIndex]" class="choice">
+        </div>
+      </div>
+      <div class="text-answer" *ngIf="question.type == 'Text Answer'">
+          <input type="text" placeholder="Add answer here..."
+          [(ngModel)]="this.questions[questionIndex].answer" class="choice">
+      </div>
+    </div>
+    <div class="add-wrapper" (click)="open()">
+      <mat-icon svgIcon="plus" class="plus"></mat-icon>
+      <div class="add">
+        Add new question
+      </div>
+    </div>
+    <div class="question-types" *ngIf="isOpen">
+      <div class="type-wrapper" *ngFor="let type of types; let i = index">
+        <div class="type" (click)="addQuestion(i)">
+          {{type}}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- questions[questionIndex].choices[choiceIndex] -->

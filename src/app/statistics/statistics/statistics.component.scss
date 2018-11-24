@@ -1,0 +1,72 @@
+
+@import '../../../styles/colors.scss';
+
+.statistics-wrapper {
+  min-height: 100vh;
+  height: auto;
+  width: 100vw;
+  background-color: #DFDFDF;
+  display: flex;
+  justify-content: center;
+
+  .statistics-section {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    // margin-top: 10vh;
+    padding: 5%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-content: flex-start;
+    flex-wrap: wrap;
+  }
+
+  h1 {
+    font-size: 2rem;
+    width: 100%;
+  }
+
+  .chart {
+    width: 80%;
+    height: 400px;
+    margin-top: 5%;
+  }
+  .half-width{
+      width: 40%;
+  }
+  .static-chart {
+    width: 40%;
+    height: 400px;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5%;
+    box-sizing: border-box;
+    font-family: 'Raleway';
+    .section {
+      width: 50%;
+      height: 50%;
+      box-sizing: border-box;
+      font-size: 1.5rem;
+      text-align: center;
+      padding: 10% 5% 10% 5%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .section:nth-of-type(1) {
+      border-bottom: 1px solid $grey;
+      border-right: 1px solid $grey;
+    }
+
+    .section:nth-of-type(2) {
+      border-bottom: 1px solid $grey;
+
+    }
+
+    .section:nth-last-of-type(2) {
+      border-right: 1px solid $grey;
+    }
+  }
+}

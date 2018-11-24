@@ -1,0 +1,10 @@
+<div id="login-wrapper">
+  <div id="login-section">
+      <img src="../../../assets/images/logo1.png" alt="logo" class="logo">
+    <form [formGroup]="loginForm">
+      <input type="text" formControlName="username" placeholder="Username">
+      <input type="password" formControlName="password" placeholder="Password">
+      <button mat-button routerLink='/home'>Login</button>
+    </form>
+  </div>
+</div>

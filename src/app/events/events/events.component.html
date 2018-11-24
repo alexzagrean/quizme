@@ -1,0 +1,75 @@
+<div class="events-wrapper">
+  <app-menu></app-menu>
+  <div class="left-events wrapper">
+    <div class="details">
+      <div class="title">
+        Your events
+      </div>
+      <div class="description">
+        Click on event to see details, statistics and charts.
+      </div>
+      <mat-icon svgIcon="search"></mat-icon>
+      <input type="text" placeholder="Search event">
+      <mat-checkbox>Sort by date</mat-checkbox>
+      <div class="select-wrapper">
+        <mat-form-field>
+          <mat-select name="filter" id="filter" placeholder="Filter by status">
+            <mat-option value="">Expired</mat-option>
+            <mat-option value="">In progress</mat-option>
+            <mat-option value="">Incoming</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+    </div>
+    <mat-card *ngFor="let event of events" class="event-card" >
+      <div class="card-wrapper">
+        <div class="event-title">
+          My event title
+        </div>
+        <div class="event-description">
+          My event description is awesome
+        </div>
+        <div class="quiz-wrapper">
+          <div class="quiz" *ngFor="let quiz of quizzes">
+            <span class="dot">o</span>
+            <div class="quiz-name">
+              {{quiz}}
+            </div>
+          </div>
+        </div>
+        <div class="deadline">
+          Deadline: August 4
+        </div>
+      </div>
+      <div class="stats" routerLink="/statistics">
+        View statistics ->
+      </div>
+    </mat-card>
+  </div>
+  <div class="right-events wrapper">
+    <mat-card *ngFor="let event of events" class="event-card" >
+      <div class="card-wrapper">
+        <div class="event-title">
+          My event title
+        </div>
+        <div class="event-description">
+          My event description is awesome
+        </div>
+        <div class="quiz-wrapper">
+          <div class="quiz" *ngFor="let quiz of quizzes">
+            <span class="dot">o</span>
+            <div class="quiz-name">
+              {{quiz}}
+            </div>
+          </div>
+        </div>
+        <div class="deadline">
+          Deadline: August 4
+        </div>
+      </div>
+      <div class="stats" routerLink="/statistics">
+        View statistics ->
+      </div>
+    </mat-card>
+  </div>
+</div>

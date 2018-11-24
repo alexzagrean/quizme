@@ -1,0 +1,244 @@
+@import '../../../styles/colors.scss';
+
+.events-wrapper {
+  width: 100vw;
+  min-height: 100vh;
+  padding-bottom: 50px;
+  box-sizing: border-box;
+  height: auto;
+  background-color: #DFDFDF;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+
+  app-menu {
+    width: 100%;
+    height: 7vh;
+    margin-bottom: 50px;
+
+    #menu-wrapper {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .event-card {
+    width: 70%;
+    height: 70vh;
+    // margin-left: 10%;
+    margin-top: 7%;
+    box-sizing: border-box;
+    cursor: pointer;
+    transition: all .3s;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .card-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      font-family: 'Raleway';
+      width: 90%;
+      height: 85%;
+      border-bottom: 1px solid lightgrey;
+
+      .event-title {
+        width: 100%;
+        text-align: center;
+        font-size: 3rem;
+        margin-top: 12%;
+        font-weight: 600;
+      }
+
+      .event-description {
+        width: 100%;
+        text-align: center;
+        font-size: 1.5rem;
+        margin-top: 9%;
+        color: grey;
+      }
+
+      .quiz-wrapper {
+        height: 40%;
+        display: flex;
+        flex-wrap: wrap;
+        width: 80%;
+        margin-top: 10%;
+
+        // overflow: scroll;
+        .quiz {
+          width: 50%;
+          display: flex;
+
+          .quiz-name {
+            margin-left: 2%;
+            font-size: 2rem;
+            font-weight: 100;
+          }
+        }
+      }
+
+      .deadline {
+        font-size: 1.5rem;
+      }
+    }
+
+    .stats {
+      width: 85%;
+      text-align: end;
+      font-size: 1.3rem;
+      font-weight: 500;
+    }
+
+  }
+
+  //   .event-card:hover{
+  //       height: 71vh;
+  //       width: 81%;
+  //   }
+  .event-card:nth-of-type(1) {
+    margin-top: 10%;
+  }
+
+  .wrapper {
+    width: 50%;
+    // display: flex;
+    // flex-wrap: wrap;
+    // justify-content: center;
+    // padding-left: 3%;
+    // padding-right: 7%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    box-sizing: border-box;
+  }
+
+  .left-events {
+    margin-top: 7%;
+
+    // padding-left: 7%;
+    // padding-right: 3%;
+    .event-card:nth-of-type(1) {
+      margin-top: 5%;
+    }
+
+    .title {
+      font-size: 3rem;
+      display: block;
+      font-family: 'Raleway';
+    }
+
+    .description {
+      font-size: 1.5rem;
+      display: block;
+      font-family: 'Raleway';
+      margin-top: 20px;
+      color: grey;
+      margin-bottom: 10px;
+    }
+
+    input {
+      height: 40px;
+      width: 60%;
+      margin-top: 2%;
+      font-size: 1.3rem;
+      padding: 2%;
+      box-sizing: border-box;
+      border: 0;
+      background-color: inherit;
+    }
+  }
+
+  .select-wrapper {
+    width: 100%;
+    display: flex;
+
+    mat-form-field {
+      width: 35%;
+      margin-left: 7%;
+      margin-top: 2%;
+
+      mat-select {
+        width: 100%;
+      }
+    }
+  }
+
+  mat-checkbox {
+    color: grey;
+  }
+}
+
+.mat-form-field-underline {
+  display: none;
+}
+
+.mat-ripple-element {
+  background-color: $orange;
+}
+
+// .mat-checkbox-background{
+//     background-color: $orange;
+// }
+
+@media only screen and (max-width: 500px) {
+  .events-wrapper .event-card .card-wrapper .quiz-wrapper .quiz .quiz-name {
+    font-size: 1.2rem;
+  }
+
+  .events-wrapper {
+    .wrapper {
+      width: 100%;
+
+      .event-card {
+        height: 60vh;
+        width: 90%;
+        padding: 5px;
+
+        .event-title {
+          font-size: 2rem;
+        }
+
+        .event-description {
+          font-size: 1.2rem;
+        }
+
+        .deadline {
+          font-size: 1.3rem;
+        }
+      }
+    }
+
+    .right-events {
+    //   display: none;
+    }
+
+    .left-events {
+      .title {
+        font-size: 2rem;
+      }
+
+      .description {
+        font-size: 1.3rem;
+      }
+
+      input {
+        font-size: 1.2rem;
+        width: 55%;
+      }
+
+      .details {
+        margin-left: 30px;
+      }
+
+      .select-wrapper {
+        mat-form-field {
+          width: 50%;
+        }
+      }
+    }
+  }
+}
