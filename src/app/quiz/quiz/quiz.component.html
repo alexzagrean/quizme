@@ -1,6 +1,14 @@
 <div id="quiz-wrapper">
   <h1>Complete the quiz</h1>
-  <div class="question" *ngFor="let question of questions">
-    
+  <div class="question" *ngFor="let question of questions; let i = index">
+    <div class="title">{{i+1}}. Question title</div>
+    <div class="choice-wrapper" *ngIf="question.type == 'Single Choice' || question.type == 'Multiple Choices'">
+        <div class="choice" *ngFor="let choice of question.choices let ci = index" >
+            <div class="dot" [ngClass]="{'active': answers[i] == ci}"></div>
+            <div class="text" (click)="setAnswer(i,ci)">{{choice}}</div>
+          </div>
+    </div>
+    <input type="text" *ngIf="question.type == 'Text Answer'">
   </div>
+  <button>Send Answers</button>
 </div>

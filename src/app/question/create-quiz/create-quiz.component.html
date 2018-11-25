@@ -2,7 +2,8 @@
   <div class="create-quiz-section">
     <h1>Your Questions Pool</h1>
     <div class="question" *ngFor="let question of questions; let questionIndex = index">
-      <input type="text" placeholder="Type question here...">
+      <input type="text" placeholder="Type question here..." [value]=question.text>
+      <span class="cancel">x</span>
       <div class="choices" *ngIf="question.type == 'Single Choice' || question.type == 'Multiple Choices'">
         <div class="choice-wrapper" *ngFor="let choice of question.choices; let choiceIndex = index;trackBy: trackByFn">
           <input type="text" placeholder="Add choice here..." (keydown.tab)="addChoice($event, questionIndex, choiceIndex)"

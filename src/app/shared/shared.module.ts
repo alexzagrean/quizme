@@ -22,7 +22,7 @@ import { MenuComponent } from './menu/menu.component'
 // import {MatBadgeModule} from '@angular/material/badge';
 import { MatCardModule } from '@angular/material/card';
 // import { MenuComponent } from './menu/menu.component';
-// import {MatDialogModule} from '@angular/material/dialog';
+import {MatDialogModule} from '@angular/material/dialog';
 // import { RouterModule } from '@angular/router';
 // import {MatMenuModule} from '@angular/material/menu';
 import { MatCheckboxModule } from '@angular/material/checkbox';
@@ -51,7 +51,7 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
     // MatSliderModule,
     // MatBadgeModule,
     MatCardModule,
-    // MatDialogModule,
+    MatDialogModule,
     // RouterModule,
     // MatMenuModule
   ],
@@ -64,7 +64,7 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
     // MatButtonToggleModule,
     // MatDatepickerModule,
     // MatNativeDateModule,
-    // MatDialogModule,
+    MatDialogModule,
     ReactiveFormsModule,
     FormsModule,
     MatIconModule,

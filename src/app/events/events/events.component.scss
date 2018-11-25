@@ -21,7 +21,19 @@
       height: 100%;
     }
   }
-
+  button{
+    width: 200px;
+    height: 60px;
+    position: absolute;
+    right: 5%;
+    top: 8%;
+    font-size: 1.8rem;
+    border: 0;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: #211D1E;
+    color: white;
+  }
   .event-card {
     width: 70%;
     height: 70vh;
@@ -190,9 +202,14 @@
   }
 
   .events-wrapper {
+    button{
+      right: 8%;
+      width: 100px;
+      height: 73px;
+      font-size: 1.3rem;
+    }
     .wrapper {
       width: 100%;
-
       .event-card {
         height: 60vh;
         width: 90%;

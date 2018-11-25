@@ -1,5 +1,6 @@
 <div class="events-wrapper">
   <app-menu></app-menu>
+  <button (click)="openDialog()" *ngIf="!dialogOpened">Create event</button>
   <div class="left-events wrapper">
     <div class="details">
       <div class="title">

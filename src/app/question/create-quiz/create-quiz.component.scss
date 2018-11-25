@@ -35,8 +35,14 @@
       box-shadow: rgba(0, 0, 0, 0.08) 0px 2px 4px, rgba(0, 0, 0, 0.06) 0px 2px 12px;
       box-sizing: border-box;
 
+      .cancel {
+        font-size: 2rem;
+        visibility: hidden;
+        color: grey;
+      }
+
       input {
-        width: 98%;
+        width: 94%;
         height: 40px;
         // background-color: red;
         // border: 1px solid rgb(216, 216, 216);
@@ -46,9 +52,10 @@
         padding: 3px;
         border-radius: 5px;
       }
-    //   .input:hover{
-    //       background-color: grey;
-    //   }
+
+      //   .input:hover{
+      //       background-color: grey;
+      //   }
       .text-answer {
         margin-left: 5%;
       }
@@ -59,6 +66,13 @@
         input {
           font-size: 1.3rem;
         }
+      }
+    }
+
+    .question:hover {
+      .cancel {
+        visibility: visible;
+        cursor: pointer;
       }
     }
 
@@ -119,14 +133,16 @@
     }
   }
 }
+
 @media only screen and (max-width: 800px) {
-  .create-quiz-wrapper{
-    .create-quiz-section{
-      .question{
+  .create-quiz-wrapper {
+    .create-quiz-section {
+      .question {
         width: 85%;
         padding: 5%;
       }
-      .question-types{
+
+      .question-types {
         width: 50%;
       }
     }

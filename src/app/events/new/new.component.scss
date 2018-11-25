@@ -1,0 +1,46 @@
+.new-wrapper {
+  width: 50vh;
+  height: 50vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+
+  input {
+    width: 90%;
+    height: 60px;
+    font-size: 2rem;
+    border: 1px solid lightgrey;
+    border-radius: 5px;
+    padding: 5px;
+    padding-left: 15px;
+  }
+
+  button {
+    width: 200px;
+    height: 60px;
+    right: 5%;
+    top: 8%;
+    font-size: 1.8rem;
+    border: 0;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: #211D1E;
+    color: white;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .new-wrapper {
+    width: 70vw;
+
+    input {
+      height: 40px;
+      font-size: 1.5rem;
+    }
+    button{
+        height: 50px;
+        font-size: 1.5rem;
+    }
+  }
+}
